@@ -1,6 +1,8 @@
+import { ApiTags } from '@nestjs/swagger';
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
+@ApiTags("公共接口")
 @Controller('app')
 export class AppController {
   constructor(private readonly appService: AppService) {}
